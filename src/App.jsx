@@ -151,7 +151,7 @@ const Header = () => {
         </button>
 
         {/* CTA (visible on desktop) */}
-        <a href="/app/language" className="hidden md:inline-block text-sm font-medium bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition-shadow shadow-md hover:shadow-lg">
+        <a href="user.trade2cart.in" className="hidden md:inline-block text-sm font-medium bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition-shadow shadow-md hover:shadow-lg">
           Schedule Pickup
         </a>
       </nav>
@@ -183,7 +183,7 @@ const Hero = () => (
     </p>
     <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
       <a
-        href="/app/language" // This directs users to your user app flow
+        href="user.trade2cart.in" // This directs users to your user app flow
         className="flex w-full sm:w-auto items-center justify-center gap-2 bg-green-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-green-700 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300">
         Sell Your Scrap
         <IconArrowRight />
