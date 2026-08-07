@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Local env (service areas live in Vercel env vars for deploys)
+.env
+.env.*
+!.env.example
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
