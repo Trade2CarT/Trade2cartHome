@@ -1,0 +1,13 @@
+{
+  "name": "Trade2Cart — Doorstep Scrap Pickup",
+  "short_name": "Trade2Cart",
+  "description": "Book a free doorstep scrap pickup, see transparent rates, and get paid on the spot.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#41ab66",
+  "icons": [
+    { "src": "/logo.png", "sizes": "1024x1024", "type": "image/png", "purpose": "any" },
+    { "src": "/logo.png", "sizes": "1024x1024", "type": "image/png", "purpose": "maskable" }
+  ]
+}

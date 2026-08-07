@@ -1,1 +1,36 @@
 @import "tailwindcss";
+
+/* Brand tokens sampled from the Trade2Cart logo — the green swoosh and the
+   orange "2". Shared with the customer and vendor apps so all three products
+   look like one company. */
+@theme {
+  --color-brand-50: #eef9f2;
+  --color-brand-100: #d5efdf;
+  --color-brand-200: #aadfc0;
+  --color-brand-300: #7dcb9c;
+  --color-brand-400: #58ba80;
+  --color-brand-500: #41ab66;
+  --color-brand-600: #2f9354;
+  --color-brand-700: #267544;
+  --color-brand-800: #205e38;
+  --color-brand-900: #1b4d2f;
+
+  --color-accent-50: #fef6e9;
+  --color-accent-100: #fce8c8;
+  --color-accent-200: #f9d08d;
+  --color-accent-300: #f6bb66;
+  --color-accent-400: #f4a33f;
+  --color-accent-500: #f2911e;
+  --color-accent-600: #d97a10;
+  --color-accent-700: #b45f0c;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  text-rendering: optimizeLegibility;
+}
