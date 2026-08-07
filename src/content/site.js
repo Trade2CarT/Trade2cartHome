@@ -3,7 +3,10 @@
 // Edit this file to change the site — components read from here, never inline.
 // ============================================================================
 
-export const SITE_URL = 'https://trade2cart.in';
+// Must match the hostname Vercel actually serves. The apex trade2cart.in
+// 307-redirects to www, so canonicals/OG/sitemap all use www — pointing them at
+// a redirecting hostname gives search engines contradictory signals.
+export const SITE_URL = 'https://www.trade2cart.in';
 
 // Service areas are config-driven because coverage keeps expanding.
 // Set VITE_SERVICE_AREAS in Vercel → Settings → Environment Variables as a
