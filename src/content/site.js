@@ -67,14 +67,15 @@ export const founder = {
   name: 'Imran S',
   title: 'Founder',
   education: 'B.Tech, Information Technology',
-  bio: 'Imran S is the founder of Trade2Cart. He built the platform end to end — the customer booking app, the vendor portal, and the internal operations dashboard — and continues to lead product and engineering.',
+  bio: 'Imran S is the founder of Trade2Cart. He built the platform end to end and continues to lead product and engineering.',
   whyStarted:
     'Selling scrap in a small town usually means tracking down a kabadiwala, haggling over a price you cannot verify, and hoping the weighing scale is honest. Trade2Cart started from a simple idea: publish the rates, send a verified vendor to the door, weigh everything in front of the customer, and pay immediately. Everything else in the product follows from those four things.',
+  // Deliberately describes outcomes, not internal systems or infrastructure.
+  // Do not list internal tools, architecture or the technology stack here.
   technicalBackground: [
-    'Designed and built the customer booking app (React, Firebase) used to pick items, see local rates and schedule pickups.',
-    'Built the vendor portal where verified vendors receive assigned orders, process bills and track earnings.',
-    'Built the internal admin dashboard for vendor verification, order assignment, billing and platform settlement.',
-    'Runs the platform infrastructure end to end — Firebase Realtime Database, authentication, notifications and deployments.',
+    'Designed and built the customer app used to pick items, see local rates and schedule a pickup.',
+    'Built the vendor portal where verified vendors receive orders, process bills and track earnings.',
+    'Leads product and engineering for the platform.',
   ],
   photoAlt: 'Imran S, Founder of Trade2Cart',
 };
@@ -249,36 +250,33 @@ export const businessModel = {
     'We are live across Arakkonam, Tiruttani, Sholinghur and the surrounding Vellore region, and we are adding new areas as verified vendors join the network.',
 };
 
+// Public-facing products only.
+// Do NOT document internal tools, operations systems or their capabilities here —
+// this file is published on the website and is readable by anyone.
 export const products = [
   {
     name: 'Customer app',
     url: apps.customer,
     description:
-      'A progressive web app where customers pick their scrap items, see rates for their location, schedule a doorstep pickup and track the booking. Installable on any phone, works in English and Tamil.',
+      'Pick your scrap items, see the rates for your location, schedule a doorstep pickup and track the booking. Installable on any phone, works in English and Tamil.',
     cta: 'Open the customer app',
   },
   {
     name: 'Vendor portal',
     url: apps.vendorRegister,
     description:
-      'Where verified vendors receive assigned orders, confirm pickups with an OTP, generate bills, and track earnings and settlements.',
+      'Where verified vendors receive their orders, generate bills, and track earnings — everything a vendor needs in one place.',
     cta: 'Register as a vendor',
-  },
-  {
-    name: 'Admin dashboard',
-    url: null,
-    description:
-      'The internal operations console: vendor verification, order assignment, rate management by location, billing, GST reporting and platform settlement. Not publicly accessible.',
-    cta: null,
   },
 ];
 
-export const techStack = [
-  'React and Vite for all three applications',
-  'Firebase Authentication and Realtime Database',
-  'Progressive Web App delivery — installable, no app store required',
-  'Tailwind CSS design system shared across products',
-  'Deployed on Vercel with automated builds',
+// Customer-facing capabilities only — no infrastructure, no vendors, no
+// architecture. Naming the stack publicly tells an attacker where to start.
+export const platformHighlights = [
+  'Installable on any phone straight from the browser — no app store needed',
+  'Available in English and Tamil',
+  'Rates published per location, visible before you book',
+  'Booking status you can track from your phone',
 ];
 
 export const faqs = [

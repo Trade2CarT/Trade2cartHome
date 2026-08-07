@@ -3,7 +3,7 @@ import FounderPhoto from '../assets/images/Imran.png';
 import VendorScreenshot from '../assets/images/vendor.jpg';
 import { Section, H1, H2, Lead, Eyebrow, Card, ButtonLink, CheckList, CtaBand } from '../components/ui';
 import { IconArrowRight, IconCheck } from '../components/icons';
-import { business, founder, businessModel, products, techStack, apps, SERVICE_AREAS, contact } from '../content/site';
+import { business, founder, businessModel, products, platformHighlights, apps, SERVICE_AREAS, contact } from '../content/site';
 
 export default function About() {
   return (
@@ -82,14 +82,14 @@ export default function About() {
       <Section className="bg-white">
         <div className="mb-12 max-w-2xl">
           <Eyebrow>Our products</Eyebrow>
-          <H2 className="mt-3">Three applications, one platform</H2>
+          <H2 className="mt-3">Built and run by us</H2>
           <Lead className="mt-4">
-            Trade2Cart runs on software we build and operate ourselves — a customer app, a vendor portal, and an
-            internal operations dashboard.
+            Trade2Cart runs on software we build and operate ourselves — one app for customers, one portal for
+            vendors.
           </Lead>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2">
           {products.map((p) => (
             <Card key={p.name} className="flex flex-col">
               <h3 className="text-lg font-bold text-slate-900">{p.name}</h3>
@@ -105,9 +105,9 @@ export default function About() {
 
         <div className="mt-12 grid items-center gap-10 lg:grid-cols-2">
           <div>
-            <h3 className="text-xl font-bold text-slate-900">How it is built</h3>
+            <h3 className="text-xl font-bold text-slate-900">What that means for you</h3>
             <ul className="mt-5 space-y-3">
-              {techStack.map((t) => (
+              {platformHighlights.map((t) => (
                 <li key={t} className="flex items-start gap-3">
                   <IconCheck />
                   <span className="text-slate-700">{t}</span>

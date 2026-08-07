@@ -26,7 +26,7 @@ export const posts = [
       },
       { h2: '2. You choose a pickup slot' },
       {
-        p: 'Confirm your address and pick a time. Behind the scenes, the booking goes to our operations dashboard, where it is assigned to a verified vendor who already works in your area. That matters for a practical reason: a vendor covering your neighbourhood arrives faster and has a stronger incentive to keep the relationship good.',
+        p: 'Confirm your address and pick a time. Your booking is then assigned to a verified vendor who already works in your area. That matters for a practical reason: a vendor covering your neighbourhood arrives faster and has a stronger incentive to keep the relationship good.',
       },
       { h2: '3. The vendor arrives, weighs, and pays' },
       {
