@@ -10,10 +10,12 @@
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#41ab66" />
 
-  <!-- Per-route <title>, description, canonical, OG/Twitter and JSON-LD are
-       injected at build time by scripts/prerender.mjs, and kept in sync during
-       client-side navigation by src/components/SEO.jsx. The tags below are the
-       fallback for the dev server only. -->
+  <!-- The head tags below are a fallback for the dev server only. Real per-route
+       metadata is injected at build time by scripts/prerender.mjs and kept in sync
+       during client-side navigation by src/components/SEO.jsx.
+       Do not write HTML tag names inside this comment: the prerender step rewrites
+       the title and description, and tag-like text here previously matched those
+       rewrites and broke the comment, which hid the stylesheet from the browser. -->
   <title>Trade2Cart — Doorstep Scrap Pickup, Fair Rates, Instant Payment</title>
   <meta name="description"
     content="Book a free doorstep scrap pickup with Trade2Cart. See transparent rates for your area, get a verified local vendor at your door, and get paid on the spot." />
