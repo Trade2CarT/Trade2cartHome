@@ -52,9 +52,31 @@ function headFor(meta) {
   return tags.join('\n    ');
 }
 
-const template = await fs.readFile(path.join(dist, 'index.html'), 'utf-8');
+// Strip HTML comments from the template BEFORE rewriting the title/description.
+// Comment text can contain tag-like strings, and a rewrite that matches inside a
+// comment eats its closing "-->" — leaving the comment open so the browser treats
+// the stylesheet and script tags as comment text. That shipped once; never again.
+const template = (await fs.readFile(path.join(dist, 'index.html'), 'utf-8'))
+  .replace(/<!--[\s\S]*?-->/g, '');
+
 const routes = allRoutes();
 let written = 0;
+
+/** Fail the build rather than deploy a page that can't load its own assets. */
+function assertRenderable(html, label) {
+  const problems = [];
+  if (!/rel="stylesheet"/.test(html)) problems.push('no stylesheet link');
+  if (!/<script[^>]+type="module"/.test(html)) problems.push('no module script');
+  const opens = (html.match(/<!--/g) || []).length;
+  const closes = (html.match(/-->/g) || []).length;
+  if (opens !== closes) problems.push(`unbalanced HTML comments (${opens} open, ${closes} close)`);
+  if (!/<div id="root">./.test(html)) problems.push('empty #root — prerender produced no markup');
+  if (problems.length) {
+    console.error(`  ✗ ${label}: ${problems.join('; ')}`);
+    return false;
+  }
+  return true;
+}
 
 for (const route of routes) {
   const meta = getRouteMeta(route.path);
@@ -75,10 +97,19 @@ for (const route of routes) {
     .replace('</head>', `  ${headFor(meta)}\n  </head>`)
     .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
 
+  if (!assertRenderable(html, route.path)) {
+    process.exitCode = 1;
+    continue;
+  }
+
   const outDir = route.path === '/' ? dist : path.join(dist, route.path);
   await fs.mkdir(outDir, { recursive: true });
   await fs.writeFile(path.join(outDir, 'index.html'), html, 'utf-8');
   written += 1;
+}
+
+if (written !== routes.length) {
+  throw new Error(`Only ${written}/${routes.length} routes were renderable — refusing to publish a broken build.`);
 }
 
 // --- 404.html -------------------------------------------------------------
