@@ -11,7 +11,7 @@ Local SEO rewards consistency: Google cross-checks your name, address and phone
 | Field | Value |
 |---|---|
 | Business name | `Trade2Cart` |
-| Website | `https://trade2cart.in` |
+| Website | `https://www.trade2cart.in` |
 | Email | `trade@trade2cart.in` |
 | Phone | `+91 8903166106` |
 | Category | Recycling centre / Waste management service / Scrap dealer |
@@ -19,7 +19,7 @@ Local SEO rewards consistency: Google cross-checks your name, address and phone
 | Service areas | Arakkonam, Tiruttani, Sholinghur, Vellore |
 | Hours | Monday–Sunday, 9:00 AM – 7:00 PM |
 | Founder | Imran S, Founder |
-| Logo | `https://trade2cart.in/logo.png` |
+| Logo | `https://www.trade2cart.in/logo.png` |
 
 ---
 
@@ -65,7 +65,7 @@ We collect paper and cardboard, plastic, metal, e-waste and appliances, glass an
 - **Business type:** Service area business (you serve customers at their location — do **not** publish a street address).
 - **Service areas:** add all four towns individually.
 - **Category:** primary `Recycling Center`; secondary `Waste Management Service`, `Scrap Metal Dealer`.
-- **Website:** `https://trade2cart.in`
+- **Website:** `https://www.trade2cart.in`
 - **Phone:** `+91 8903166106`
 - **Description:** use the medium description above.
 - **Photos:** logo, vendor-app screenshot, and real pickup photos when you have them.
@@ -82,14 +82,14 @@ Bio (150 char limit):
 💰 Fair rates, paid on the spot
 👇 Book a free pickup
 ```
-Link: `https://trade2cart.in`
+Link: `https://www.trade2cart.in`
 Content that works: before/after collection photos, a rate update per category, vendor introductions, customer stories.
 
 ### 4. LinkedIn company page
 - Tagline: use the short description.
 - About: use the long description.
 - Industry: `Environmental Services`; Company size: 1–10; Founded: 2025.
-- Website: `https://trade2cart.in`
+- Website: `https://www.trade2cart.in`
 - Add yourself as Founder so the page links to your personal profile — this is what makes the `Person` structured data on `/about` corroborate.
 
 ### 5. Facebook page
@@ -98,9 +98,11 @@ Content that works: before/after collection photos, a rate update per category, 
 - Add the service areas and phone so the NAP matches.
 
 ### 6. Google Search Console (do this the day you deploy)
-1. Add property `https://trade2cart.in` (domain property is best).
+1. Add a **Domain property** for `trade2cart.in` — it covers both the apex and the
+   `www` hostname in one place, which matters because the site is served on
+   `www.trade2cart.in` and the apex redirects to it.
 2. Verify via DNS TXT record in your domain registrar.
-3. Submit the sitemap: `https://trade2cart.in/sitemap.xml`
+3. Submit the sitemap: `https://www.trade2cart.in/sitemap.xml`
 4. Use **URL Inspection → Request indexing** on the homepage and each city page to speed up first crawl.
 
 ### 7. Directories (do after the above)
