@@ -323,7 +323,7 @@ export const faqs = [
 
 export const legal = {
   effectiveDate: '23-06-2025',
-  lastUpdated: '23-08-2025',
+  lastUpdated: '14-10-2026',
 };
 
 export const nav = [
