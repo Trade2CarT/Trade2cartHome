@@ -48,7 +48,7 @@ export function Privacy() {
       <Block heading="How we use your data">
         <ul>
           <li>To process your booking and assign a verified vendor to it.</li>
-          <li>To send you notifications and updates about your pickup.</li>
+          <li>To send you notifications and updates about your pickup. If you provide an email address, we email you only when a vendor is assigned (with the vendor's name) and when your trade is completed (with your bill and total amount). We do not send marketing emails.</li>
           <li>To provide customer support and resolve disputes.</li>
           <li>To improve the service and detect fraud or misuse.</li>
         </ul>
@@ -56,7 +56,8 @@ export function Privacy() {
 
       <Block heading="Data sharing">
         <ul>
-          <li>We share your name, contact number and pickup address with the vendor assigned to your booking — this is necessary for the pickup to happen.</li>
+          <li>We share your name, contact number and pickup address with the vendor assigned to your booking — this is necessary for the pickup to happen. The vendor also receives your name and pickup location by email.</li>
+          <li>We use a third-party email delivery service to send these emails; it processes your email address and message content only to deliver them.</li>
           <li>We do not sell your personal data to third parties, and we do not share it for advertising.</li>
           <li>We may disclose data where required by law.</li>
         </ul>
